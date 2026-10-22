@@ -1,5 +1,6 @@
 import { eachDayOfInterval } from "date-fns";
 import { supabase } from "@/_lib/supabase";
+import countries from "@/_lib/countries.json";
 import { notFound } from "next/navigation";
 
 /////////////
@@ -140,16 +141,10 @@ export async function getSettings() {
   return data;
 }
 
+// Static list (names + flagcdn.com flags), since the free restcountries.com
+// API versions were shut down and the new one requires an API key.
 export async function getCountries() {
-  try {
-    const res = await fetch(
-      "https://restcountries.com/v2/all?fields=name,flag",
-    );
-    const countries = await res.json();
-    return countries;
-  } catch {
-    throw new Error("Could not fetch countries");
-  }
+  return countries;
 }
 
 /////////////
