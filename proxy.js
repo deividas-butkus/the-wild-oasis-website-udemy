@@ -1,13 +1,13 @@
 // import { NextResponse } from "next/server";
 
-// export function middleware(request) {
+// export function proxy(request) {
 
 //   return NextResponse.redirect(new URL("/about", request.url));
 // }
 
 import { auth } from "@/_lib/auth";
 
-export const middleware = auth;
+export const proxy = auth;
 
 export const config = {
   matcher: ["/account"],

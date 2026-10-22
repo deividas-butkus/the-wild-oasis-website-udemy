@@ -3,7 +3,7 @@ import { updateBooking } from "@/_lib/actions";
 import SubmitButton from "@/_components/SubmitButton";
 
 export default async function Page({ params }) {
-  const { bookingId } = params;
+  const { bookingId } = await params;
 
   const { numGuests, observations, cabinId } = await getBooking(bookingId);
   const { maxCapacity } = await getCabin(cabinId);
