@@ -37,3 +37,9 @@
   --rdp-background-color: theme('colors.accent.600') !important;
   margin: 0 !important;
 }
+
+/* Two months side by side on wide screens, stacked on phones */
+.rdp-months {
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -16,7 +16,7 @@ export default async function Page({ params }) {
 
       <form
         action={updateBooking}
-        className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+        className="bg-primary-900 py-6 px-5 sm:py-8 sm:px-12 text-lg flex gap-6 flex-col"
       >
         <input type="hidden" name="bookingId" value={bookingId} />
         <div className="space-y-2">

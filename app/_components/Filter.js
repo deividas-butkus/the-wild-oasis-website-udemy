@@ -16,7 +16,7 @@ function Filter() {
   }
 
   return (
-    <div className="border border-primary-800 flex">
+    <div className="border border-primary-800 grid grid-cols-2 w-full sm:flex sm:w-auto">
       <Button
         filter="all"
         handleFilter={handleFilter}
