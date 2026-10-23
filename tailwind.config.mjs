@@ -3,6 +3,10 @@ import colors from "./app/_styles/colors.json" assert { type: "json" };
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  // Phones keep :hover after a tap, which left tapped buttons highlighted
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./_components/**/*.{js,ts,jsx,tsx,mdx}",
