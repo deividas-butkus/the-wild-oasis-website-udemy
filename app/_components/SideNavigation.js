@@ -32,7 +32,7 @@ function SideNavigation() {
 
   return (
     <nav className="border-b pb-4 md:pb-0 md:border-b-0 md:border-r border-primary-900">
-      <ul className="grid grid-cols-2 md:flex md:flex-col gap-2 h-full text-base md:text-lg">
+      <ul className="grid grid-cols-2 md:flex md:flex-col gap-2 md:h-full text-base md:text-lg">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
